@@ -32,6 +32,8 @@ h2:nth-child(2) {
 
 .wrapper {
   margin: 1rem;
+  display: flex;
+  width: 80%;
 }
 
 div.masonry {
