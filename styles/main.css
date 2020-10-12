@@ -68,12 +68,12 @@ div.masonry:hover img:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
-  div#masonry {
+@media screen and (max-width: 690px) {
+  div.masonry {
     height: 200vw;
     flex-flow: column wrap;
   }
-  div#masonry img {
+  div.masonry img {
     width: 50%;
   }
 }
