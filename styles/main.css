@@ -30,6 +30,12 @@ h2:nth-child(2) {
   color: #76ad9b;
 }
 
+.img-wrapper {
+  display: inline-block;
+  width: 33.3%;
+  position: relative;
+}
+
 .wrapper {
   margin: 1rem;
   display: flex;
@@ -48,14 +54,15 @@ div.masonry {
   align-items: center;
 }
 div.masonry img {
-  width: 33.3%;
+  width: 100%;
   transition: 0.5s opacity;
 }
 div.masonry:hover img {
 	opacity: 0.3;
 }
 div.masonry:hover img:hover {
-	opacity: 1;
+  opacity: 1;
+  cursor: crosshair;
 }
 
 @supports not (flex-wrap: wrap) {
@@ -68,14 +75,39 @@ div.masonry:hover img:hover {
   }
 }
 
+.hidden {
+  /* display: none; */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+div.img-wrapper:hover .overlay {
+  opacity: .6;
+}
+
 @media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
   div.masonry {
     align-content: center;
-    height: 200vw;
+    /* height: 200vw; */
     width: 100%;
     flex-flow: row wrap;
   }
-  div.masonry img {
+  .img-wrapper {
     width: 100%;
   }
 }
