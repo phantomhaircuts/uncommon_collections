@@ -1,5 +1,5 @@
-var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'key892LAYQL8OqDjw'}).base('appAKhLv2XNhfzfF4');
+let Airtable = require('airtable');
+let base = new Airtable({apiKey: 'key892LAYQL8OqDjw'}).base('appAKhLv2XNhfzfF4');
 
 base('Table 1').select({
     maxRecords: 100,
@@ -9,7 +9,7 @@ base('Table 1').select({
     records.forEach(function(record) {
         let masonry = document.querySelector('.masonry');
         masonry.innerHTML += `
-            <img src='${record.fields.Attachments[0].url}'/>
+            <img src='${record.fields.Attachments[0].thumbnails.large.url}'/>
         </div>
     `
         console.log('Retrieved', record.get('Caption'));

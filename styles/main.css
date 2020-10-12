@@ -70,11 +70,12 @@ div.masonry:hover img:hover {
 
 @media screen and (max-width: 768px) {
   div.masonry {
+    align-content: center;
     height: 200vw;
     width: 100%;
     flex-flow: row wrap;
   }
   div.masonry img {
-    width: 50%;
+    width: 100%;
   }
 }
