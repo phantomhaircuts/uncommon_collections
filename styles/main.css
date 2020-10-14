@@ -79,10 +79,31 @@ div.masonry:hover img:hover {
   /* display: none; */
 }
 
+.hide {
+  display: none;
+}
+
+.detail-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 500px;
+  width: 500px;
+  /* background-color: red; */
+  z-index: 10;
+}
+
+.detail-img {
+  width: 50vw;
+  /* height:100vh; */
+}
+
 .overlay {
   position: absolute;
   bottom: 0;
-  z-index: 100;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.5); /* Black see-through */
   width: 100%;
   transition: .5s ease;
